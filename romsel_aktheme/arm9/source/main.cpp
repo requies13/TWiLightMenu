@@ -937,12 +937,12 @@ void bgOperations(bool waitFrame) {
 		customSleep();
 	}
 	checkSdEject();
-	drawTime();
-	drawYear();
-	drawMonth();
-	drawDayX();
-	drawDay();
-	drawWeekday();
+	// drawTime();
+	// drawYear();
+	// drawMonth();
+	// drawDayX();
+	// drawDay();
+	// drawWeekday();
 	if (waitFrame) {
 		swiWaitForVBlank();
 	}
