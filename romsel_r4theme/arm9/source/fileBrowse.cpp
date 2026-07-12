@@ -370,7 +370,7 @@ void showDirectoryContents (const std::vector<DirEntry>& dirContents, const int 
 
 void mdRomTooBig(void) {
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 3;
@@ -401,7 +401,7 @@ void mdRomTooBig(void) {
 
 void ramDiskMsg(void) {
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 1;
@@ -432,7 +432,7 @@ bool dsiBinariesMissingMsg(void) {
 	bool proceedToLaunch = false;
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 2;
@@ -490,7 +490,7 @@ bool donorRomMsg(void) {
 	}
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	bool ubongo = (memcmp(gameTid, "KUB", 3) == 0);
@@ -647,7 +647,7 @@ bool checkForCompatibleGame(const char *filename) {
 	if (proceedToLaunch) return true;	// Game is compatible
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 3;
@@ -729,7 +729,7 @@ bool cannotLaunchMsg(char tid1) {
 	bool res = false;
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	showdialogbox = true;
@@ -776,7 +776,7 @@ bool dsiWareInDSModeMsg(void) {
 	bool proceedToLaunch = true;
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 4;
@@ -923,7 +923,7 @@ bool dsiWareRAMLimitMsg(std::string filename) {
 	bool proceedToLaunch = true;
 
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 	dialogboxHeight = 3;
@@ -1380,7 +1380,7 @@ std::string browseForFile(const std::vector<std::string_view> extensionList) {
 
 				if (hasAP > 0) {
 					if (ms().macroMode) {
-						lcdMainOnBottom();
+						lcdMainOnTop();
 						lcdSwapped = true;
 					}
 
@@ -1433,7 +1433,7 @@ std::string browseForFile(const std::vector<std::string_view> extensionList) {
 				if ((useBootstrapAnyway || isDSiWare) && bnrRomType == 0 && (!isDSiWare || (ms().secondaryDevice && (!sdFound() || !ms().dsiWareToSD || bs().b4dsMode))) && isHomebrew == 0
 				 && proceedToLaunch && st[ms().secondaryDevice].f_bsize < (32 << 10) && !ms().dontShowClusterWarning) {
 					if (ms().macroMode) {
-						lcdMainOnBottom();
+						lcdMainOnTop();
 						lcdSwapped = true;
 					}
 
@@ -1594,7 +1594,7 @@ std::string browseForFile(const std::vector<std::string_view> extensionList) {
 
 		if ((pressed & KEY_X) && !ms().kioskMode && !ms().preventDeletion && dirContents.at(fileOffset).name != "..") {
 			if (ms().macroMode) {
-				lcdMainOnBottom();
+				lcdMainOnTop();
 				lcdSwapped = true;
 			}
 

@@ -464,7 +464,7 @@ void remapButtons (std::string filename) {
 
 void perGameSettings (std::string filename) {
 	if (ms().macroMode) {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 

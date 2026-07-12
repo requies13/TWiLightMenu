@@ -1122,11 +1122,11 @@ int r4Theme(void) {
 				int err = runNdsFile(argarray[0], argarray.size(), (const char**)&argarray[0], sys().isRunFromSD(), true, false, false, true, true, false, -1);
 				iprintf ("Start failed. Error %i\n", err);
 		  } else {
-			lcdMainOnBottom();
+			lcdMainOnTop();
 			lcdSwapped = true;
 			do {
 				clearText();
-				printSmall(false, -112, 166, DrawDate(), Alignment::center, FontPalette::white);
+				//printSmall(false, -112, 166, DrawDate(), Alignment::center, FontPalette::white);
 				if (!ms().kioskMode) {
 					printSmall(false, 0, 180, "SELECT: Settings menu", Alignment::center, FontPalette::white);
 				}
@@ -1148,7 +1148,7 @@ int r4Theme(void) {
 						}
 						break;
 				}
-				printSmall(false, 111, 166, RetTime().c_str(), Alignment::center, FontPalette::white);
+				//printSmall(false, 111, 166, RetTime().c_str(), Alignment::center, FontPalette::white);
 				updateText(false);
 
 				scanKeys();

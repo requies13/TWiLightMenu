@@ -706,7 +706,7 @@ void graphicsInit()
 	vramSetBankH(VRAM_H_SUB_BG_EXT_PALETTE);
 	vramSetBankI(VRAM_I_SUB_SPRITE_EXT_PALETTE);
 
-	lcdMainOnBottom();
+	lcdMainOnTop();
 
 	int bg3Main = bgInit(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
 	bgSetPriority(bg3Main, 3);
@@ -726,7 +726,7 @@ void graphicsInit()
 		lcdMainOnTop();
 		lcdSwapped = false;
 	} else {
-		lcdMainOnBottom();
+		lcdMainOnTop();
 		lcdSwapped = true;
 	}
 
