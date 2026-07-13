@@ -1073,7 +1073,7 @@ int akTheme(void) {
 		startW = ini.GetInt("start button", "w", startW);
 		startH = ini.GetInt("start button", "h", startH);
 
-		displayStartButton(startX, startY);
+		//displayStartButton(startX, startY);
 
 		startTextX = startX + startW/5;
 		startTextY = startY + startH/5;
@@ -1109,7 +1109,7 @@ int akTheme(void) {
 			char16_t username[11] = {0};
 			tonccpy(username, useTwlCfg ? (s16 *)0x02000448 : PersonalData->name, 10 * sizeof(char16_t));
 
-			printSmall(true, x, y, username, Alignment::left, FontPalette::usernameText);
+			//printSmall(true, x, y, username, Alignment::left, FontPalette::usernameText);
 			updateText(true);
 		}
 
