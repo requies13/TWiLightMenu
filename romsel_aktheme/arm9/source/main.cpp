@@ -204,7 +204,7 @@ using namespace std;
 
 int cursorPosOnScreen = 0;
 
-std::string startText = "START";
+std::string startText = "";
 int startTextX = 0;
 int startTextY = 0;
 int startX = 4;
@@ -1066,7 +1066,7 @@ int akTheme(void) {
 		CIniFile ini( iniPath.c_str() );
 		startText = ini.GetString("start button", "text", startText);
 		if (startText == "ini") {
-			startText = "START";
+			startText = "";
 		}
 		startX = ini.GetInt("start button", "x", startX);
 		startY = ini.GetInt("start button", "y", startY);
